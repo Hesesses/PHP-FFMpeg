@@ -92,7 +92,7 @@ abstract class AbstractVideo extends Audio
                     }
                     $listeners = $format->createProgressListener($this, $this->ffprobe, $pass + 1, $totalPasses, $duration);
                 }
-
+dd($passCommands);
                 $this->driver->command($passCommands, false, $listeners);
             } catch (ExecutionFailureException $e) {
                 $failure = $e;
