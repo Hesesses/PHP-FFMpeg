@@ -58,7 +58,7 @@ class ClipFilter implements VideoFilterInterface
     /**
      * {@inheritdoc}
      */
-    public function apply(Video $video, VideoInterface $format)
+    public function apply($video, $format)
     {
         $commands = array('-ss', (string) $this->start);
 
